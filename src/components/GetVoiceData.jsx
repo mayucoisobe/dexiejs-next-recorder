@@ -2,7 +2,7 @@ import { db } from '@/db';
 import { useLiveQuery } from 'dexie-react-hooks';
 
 export function GetVoiceData() {
-  // DBからデータを取得
+  // IndexedDBからデータを取得
   const IndexedData = useLiveQuery(async () => {
     const allVoiceList = await db.voicelist.toArray();
     // // 音声データ Blob → Blob URLに変換する
@@ -21,7 +21,9 @@ export function GetVoiceData() {
 
   return (
     <>
-      <h2>🎧 Get data from IndexedDB</h2>
+      <h3>
+        🎧 IndexedDBからデータ取得：<a href="https://dexie.org/">Dexie.js</a> 使用
+      </h3>
       <ul>
         {IndexedData?.map((data) => (
           <li key={data.id}>

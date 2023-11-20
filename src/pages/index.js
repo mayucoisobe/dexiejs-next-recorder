@@ -6,10 +6,10 @@ export default function Home() {
   return (
     <>
       <>
-        <h1>
-          <a href=" https://dexie.org/">Dexie.js</a> -VoiceRecorder-Demo
-        </h1>
+        <h1>Dexie.js-VoiceRecorder-Demo</h1>
+        <h2 className="ttl">- ブラウザでの録音~保存 -</h2>
         <AddVoiceData />
+        <h2 className="ttl">- Audio List -</h2>
         <GetVoiceData />
         <ClearDatabaseButton />
       </>
